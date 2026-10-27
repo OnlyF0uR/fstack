@@ -1,0 +1,14 @@
+{
+  "name": "fstack",
+  "owner": { "name": "OnlyF0uR" },
+  "metadata": {
+    "description": "fstack: a personal Claude Code working style with a reflect and correct loop"
+  },
+  "plugins": [
+    {
+      "name": "fstack",
+      "source": "./",
+      "description": "four-mode (how work gets done and proven), reflect (session lessons into skill edits) and correct (repeated mistakes into checks)"
+    }
+  ]
+}
