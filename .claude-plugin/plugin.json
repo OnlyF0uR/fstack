@@ -1,7 +1,0 @@
-{
-  "name": "fstack",
-  "description": "four-mode, reflect and correct: a working style for fast Claude Code sessions without review, plus a loop that turns lessons into skill edits and repeated mistakes into checks.",
-  "author": { "name": "OnlyF0uR" },
-  "repository": "https://github.com/OnlyF0uR/fstack",
-  "keywords": ["workflow", "verification", "reflect", "correct", "rust", "react"]
-}

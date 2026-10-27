@@ -80,6 +80,20 @@ When guidance conflicts, the more specific source wins: the project's own conven
 
 When a domain skill is wrong (an outdated version, an API that changed, a step that fails), work around it for the task, say what was wrong in the reply, and name it as something for the reflect skill.
 
+## New skills
+
+When the user asks for a new skill, or a workflow keeps coming back, put it where it loads when it's needed and nowhere else:
+
+| The skill is about | Where it goes |
+|---|---|
+| One project: its app, its data, its conventions | That project's `.claude/skills/<name>/`, committed with the code |
+| Rust, writing, or other knowledge the team shares | Atroxabot/skills, in the plugin that matches its theme |
+| Building websites, stores or panels | OnlyF0uR/ngd |
+| A personal tool or workflow used across projects | OnlyF0uR/fstack, in the `fstack-extras` plugin. The `fstack` plugin only takes what the four-mode, reflect and correct loop needs. |
+| An experiment that may not last | `~/.claude/skills/<name>/` until it has been used a few times, then one of the rows above |
+
+The reason is where each one loads. A project skill loads only in its project and moves with the code. A shared collection helps everyone who installs it. fstack is installed everywhere the user works, so it only gets what they want everywhere. Each of those repositories has a CLAUDE.md with its own steps for adding a skill, so follow it.
+
 ## Subagents
 
 - Use a subagent for broad searches and bulk reading, so the main conversation keeps the conclusions and not the raw files. Ask it for answers with `file:line` references.

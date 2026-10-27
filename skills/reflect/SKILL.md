@@ -45,11 +45,12 @@ Then drop:
 |---|---|
 | This project only | Not reflect. The project's CLAUDE.md, or the correct skill. |
 | How the user likes to work, in any project | OnlyF0uR/fstack: `skills/four-mode/SKILL.md` |
+| Another fstack skill | OnlyF0uR/fstack: that skill's folder under `skills/` |
 | Rust in general | Atroxabot/skills: `skills/rust-dev/` or `skills/rust-gui/` |
 | Building sites, stores or panels | OnlyF0uR/ngd. Shared material lives in `shared/`, so edit it there and never in a skill's synced copy. |
 | Writing | Atroxabot/skills: `skills/humanizer/` and the format skills. The humanizer's catalog and scanner are the originals of copies in three other skills. |
 | A skill that should have triggered and didn't | That skill's `description` |
-| A workflow that keeps coming back and that no skill covers | A new skill. This is rare: propose it, but don't write it in this pass. |
+| A workflow that keeps coming back and that no skill covers | A new skill, in the home that the New skills table in the four-mode skill gives it. This is rare: propose it, but don't write it in this pass. |
 
 Fix a skill at its source, not with an override in four-mode. "When ngd says X, do Y" leaves ngd wrong for every other session, and four-mode turns into a pile of patches that contradict the skills it routes to.
 

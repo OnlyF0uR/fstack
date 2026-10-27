@@ -8,7 +8,16 @@
     {
       "name": "fstack",
       "source": "./",
-      "description": "four-mode (how work gets done and proven), reflect (session lessons into skill edits) and correct (repeated mistakes into checks)"
+      "strict": false,
+      "description": "four-mode (how work gets done and proven), reflect (session lessons into skill edits) and correct (repeated mistakes into checks)",
+      "author": { "name": "OnlyF0uR" },
+      "repository": "https://github.com/OnlyF0uR/fstack",
+      "keywords": ["workflow", "verification", "reflect", "correct", "rust", "react"],
+      "skills": [
+        "./skills/four-mode",
+        "./skills/reflect",
+        "./skills/correct"
+      ]
     }
   ]
 }
