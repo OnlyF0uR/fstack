@@ -47,7 +47,7 @@ Then drop:
 | How the user likes to work, in any project | OnlyF0uR/fstack: `skills/four-mode/SKILL.md` |
 | Another fstack skill | OnlyF0uR/fstack: that skill's folder under `skills/` |
 | Rust in general | Atroxabot/skills: `skills/rust-dev/` or `skills/rust-gui/` |
-| Building sites, stores or panels | OnlyF0uR/ngd. Shared material lives in `shared/`, so edit it there and never in a skill's synced copy. |
+| Building sites, stores or panels | OnlyF0uR/ngd. Shared material lives in `shared/`, so edit it there and never in a skill's synced copy. council's web-design, visual-design and motion-design specialists (in fstack) copy rules from ngd's design-language, panel-ux and motion files, so update them in the same session. |
 | Writing | Atroxabot/skills: `skills/humanizer/` and the format skills. The humanizer's catalog and scanner are the originals of copies in three other skills. |
 | A skill that should have triggered and didn't | That skill's `description` |
 | A workflow that keeps coming back and that no skill covers | A new skill, in the home that the New skills table in the four-mode skill gives it. This is rare: propose it, but don't write it in this pass. |

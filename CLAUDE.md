@@ -1,6 +1,6 @@
 # fstack: working in this repo
 
-fstack is a Claude Code plugin marketplace for one person's way of working. The `fstack` plugin holds the core loop: four-mode (the working style), reflect (session lessons into skill edits) and correct (repeated mistakes into checks in a project). The `fstack-extras` plugin holds other personal skills, such as council. Domain skills live in their own repositories, Atroxabot/skills and OnlyF0uR/ngd. fstack refers to them by name and never copies them, because a copy drifts from its original.
+fstack is a Claude Code plugin marketplace for one person's way of working. The `fstack` plugin holds the core loop: four-mode (the working style), reflect (session lessons into skill edits) and correct (repeated mistakes into checks in a project). The `fstack-extras` plugin holds other personal skills, such as council. Domain skills live in their own repositories, Atroxabot/skills and OnlyF0uR/ngd. fstack refers to them by name and never copies them, because a copy drifts from its original. The one exception is council's web-design, visual-design and motion-design specialists, which copy ngd rules at your request so they work without ngd installed. Each names the ngd file and commit it came from, and reflect updates them when those ngd files change.
 
 ## Layout
 
