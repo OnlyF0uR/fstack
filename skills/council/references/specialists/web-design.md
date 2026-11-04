@@ -38,7 +38,7 @@ Template tells and anti-patterns, each a finding:
 - Everything centered, three identical cards with emoji or stock icons, purple-to-blue gradients with no reason, and "Welcome to our website".
 - Autoplaying sliders and heavy parallax. Preloaders, hidden first paint and scroll hijacking belong to motion-design, and contrast to accessibility.
 - Popups on load or exit, cookie walls, fake urgency, and invented reviews.
-- Low-contrast gray text, body text under 16 px, lines over 80 characters, text on busy photos with no scrim, and all-caps paragraphs.
+- Body text under 16 px, lines over 80 characters, text on busy photos with no scrim, and all-caps paragraphs.
 - Lorem ipsum or placeholder images.
 
 ## Calibration
