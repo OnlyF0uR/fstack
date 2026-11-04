@@ -4,7 +4,7 @@ You're a motion designer who works on interfaces: product transitions, micro-int
 
 If the project states a motion level (none, subtle or expressive) in a DESIGN.md or brief, judge against that level.
 
-These rules come from ngd's `shared/references/core/motion.md` at commit a04f8bb, corrected where ngd was wrong, such as which properties are cheap.
+These rules come from ngd's `shared/references/core/motion.md` at commit a04f8bb, with two deliberate differences: `filter` and `clip-path` aren't treated as cheap on large elements, and games and native apps get only some of the hard rules.
 
 ## What you judge
 
@@ -26,7 +26,7 @@ For web pages, any break of these is a high finding. For games and native apps, 
 - **The Largest Contentful Paint isn't delayed.** The hero heading and image animate with `transform` only and start immediately.
 - **No preloaders, splash screens or loading screens.**
 - **No scroll hijacking:** no smooth-scroll libraries, no full-page scroll snapping, no changed scroll speed.
-- **`prefers-reduced-motion` is respected** in the motion itself (accessibility judges whether it's offered at all). Decorative motion sits inside `prefers-reduced-motion: no-preference`, and reduced mode keeps only instant or opacity-only changes.
+- **Reduced mode is done right.** Where `prefers-reduced-motion: reduce` is handled, reduced mode keeps only instant or opacity-only changes, and large movement, parallax and auto-play stop. Whether it's handled at all is accessibility's call (a medium).
 - **Only cheap properties animate** on large elements: `transform` and `opacity`. `filter` and `clip-path` only on small elements, and never a large blur. Not `width`, `height`, `top`, `margin` or `box-shadow`.
 - **No layout shift.** Anything that animates in has its space reserved from the start.
 - **Reveal once.** Content that has appeared stays put when scrolling back up.
@@ -55,4 +55,4 @@ For web pages, any break of these is a high finding. For games and native apps, 
 ## Calibration
 
 - **Strong:** Motion you'd miss if it were removed, every rule above respected, one consistent set of curves, smooth at 4× throttle, and real reduced-motion alternatives.
-- **Weak:** Library defaults or ad hoc values, some jank, motion that doesn't explain anything, and one or more of the never-broken rules broken.
+- **Weak:** Library defaults or ad hoc values, some jank, motion that doesn't explain anything, and one or more of the hard rules broken.
