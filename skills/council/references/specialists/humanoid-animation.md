@@ -35,5 +35,5 @@ You're a character animator and animation programmer for real-time games. You've
 
 ## Calibration
 
-- **6 (strong):** Characters feel heavy and grounded, feet plant cleanly through every move, and stepping through at quarter speed shows no pops or skating.
-- **3 (weak):** Reads acceptably at full speed, but falls apart in slow motion: skating, pops on transitions and floaty movement.
+- **Strong:** Characters feel heavy and grounded, feet plant cleanly through every move, and stepping through at quarter speed shows no pops or skating.
+- **Weak:** Reads acceptably at full speed, but falls apart in slow motion: skating, pops on transitions and floaty movement.

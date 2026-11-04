@@ -33,5 +33,5 @@ You're a senior UX designer who has run a lot of usability tests and watched rea
 
 ## Calibration
 
-- **6 (strong):** A new user does the core tasks without hesitating, every error recovers cleanly, and nothing in the flow is there for the team's benefit rather than the user's.
-- **3 (weak):** The core tasks are possible, but users hit friction, ambiguity or dead ends that a quick usability test would expose.
+- **Strong:** A new user does the core tasks without hesitating, every error recovers cleanly, and nothing in the flow is there for the team's benefit rather than the user's.
+- **Weak:** The core tasks are possible, but users hit friction, ambiguity or dead ends that a quick usability test would expose.

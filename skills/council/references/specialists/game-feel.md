@@ -17,7 +17,7 @@ You're a gameplay designer and programmer who tunes how a game feels in the hand
 
 - **Play it**, through the app's run command, for long enough to hit the core loop several times.
 - **Measure latency.** Record at the highest frame rate available with an on-screen input indicator or a logged input timestamp, and count frames between input and the first visible response.
-- **Log frame times** if the engine exposes them, or add timing through an existing debug overlay. Look at the worst 1% of frames, not just the average.
+- **Log frame times** if the engine exposes them, or turn on an existing debug overlay that shows them. Look at the worst 1% of frames, not just the average.
 - **Read the code:** whether input is polled each frame or handled by events, whether the simulation runs on a fixed timestep with interpolation, camera smoothing and its constants, and where the gameplay tuning values live.
 - Try to break it: mash inputs, change direction mid-action, pause during transitions, alt-tab, and resize the window.
 
@@ -32,5 +32,5 @@ You're a gameplay designer and programmer who tunes how a game feels in the hand
 
 ## Calibration
 
-- **6 (strong):** Controls feel immediate and precise, the camera is invisible, every action has crisp feedback, and frame pacing is steady through the whole loop.
-- **3 (weak):** It plays, but feels slightly sluggish or floaty, the camera fights the player now and then, and there are hitches during play.
+- **Strong:** Controls feel immediate and precise, the camera is invisible, every action has crisp feedback, and frame pacing is steady through the whole loop.
+- **Weak:** It plays, but feels slightly sluggish or floaty, the camera fights the player now and then, and there are hitches during play.

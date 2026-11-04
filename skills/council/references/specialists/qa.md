@@ -13,7 +13,8 @@ You're an exploratory tester. Your talent is finding the input, sequence or cond
 
 ## How you inspect
 
-- **Drive it with Playwright.** Listen to `page.on('console')`, `page.on('pageerror')` and `page.on('requestfailed')` throughout, and log every response with status 400 or higher. Save the logs in your evidence folder.
+- **CLIs, libraries and APIs:** call them directly. Run the CLI with good, bad and missing arguments and check exit codes and messages. Call the library's public API from a small script in your evidence folder. Send well-formed and malformed requests to a local API.
+- **Drive web apps with Playwright.** Listen to `page.on('console')`, `page.on('pageerror')` and `page.on('requestfailed')` throughout, and log every response with status 400 or higher. Save the logs in your evidence folder.
 - **Explore systematically.** For each core task, run the happy path once, then go through the inputs, sequences and conditions above that apply. Throttle the network through a CDP session, and use `context.setOffline(true)` for offline.
 - **Crawl the links** reachable from the main pages and check their status.
 - **Write each bug as a reproduction:** the starting state, the exact steps, what you expected and what happened, with a screenshot or log line.
@@ -30,5 +31,5 @@ You're an exploratory tester. Your talent is finding the input, sequence or cond
 
 ## Calibration
 
-- **6 (strong):** You tried hard and found only minor issues. The core tasks survive bad input, bad sequences and bad networks, and the console is clean.
-- **3 (weak):** The happy path works, but common real-world misuse breaks things, and the console and network logs show errors in normal use.
+- **Strong:** You tried hard and found only minor issues. The core tasks survive bad input, bad sequences and bad networks, and the console is clean.
+- **Weak:** The happy path works, but common real-world misuse breaks things, and the console and network logs show errors in normal use.

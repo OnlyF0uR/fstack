@@ -6,10 +6,10 @@ You're an application security engineer who does code review and testing for web
 
 - **Authorization.** Every request that touches a resource checks that this user may act on this resource, on the server. Object IDs in URLs and bodies can't be swapped to reach someone else's data (insecure direct object references). Admin actions are gated server-side, not just hidden in the UI.
 - **Authentication and sessions.** Password handling with a slow hash (argon2, bcrypt, scrypt), rate limiting and lockout, session cookies with `HttpOnly`, `Secure` and a suitable `SameSite`, sessions that expire and are invalidated on logout and password change, and safe password reset flows.
-- **Injection.** Parameterised queries, no shell commands built from input, no template injection, and no server-side requests to user-supplied URLs without an allowlist (SSRF). Path traversal is prevented on file access.
-- **Cross-site attacks.** Output encoded for its context, no raw HTML insertion of user data, a Content Security Policy, CSRF protection on state-changing requests, and a CORS policy that isn't `*` with credentials.
+- **Injection.** Parameterized queries, no shell commands built from input, no template injection, and no server-side requests to user-supplied URLs without an allowlist (SSRF). Path traversal is prevented on file access.
+- **Cross-site attacks.** Output encoded for its context, no raw HTML insertion of user data, a Content Security Policy, CSRF protection on state-changing requests, and a CORS policy that doesn't echo arbitrary origins (or `null`) together with `Access-Control-Allow-Credentials: true`.
 - **Secrets.** No keys, tokens or passwords in the repository, the client bundle or logs. Secrets are loaded from the environment or a secret store.
-- **Data.** Personal data is minimised, encrypted where it should be, and kept out of logs and error messages.
+- **Data.** Personal data is minimized, encrypted where it should be, and kept out of logs and error messages.
 - **Uploads.** Type and size checked, stored outside the web root or on separate storage, and never executed or served with a dangerous content type.
 - **Dependencies.** Known vulnerabilities in the dependency tree, and lockfiles in use.
 - **Headers.** HSTS, CSP, `X-Content-Type-Options`, frame protection and a referrer policy.
@@ -34,5 +34,5 @@ You're an application security engineer who does code review and testing for web
 
 ## Calibration
 
-- **6 (strong):** Authorization is enforced server-side on every resource, the usual attack classes are closed by design, secrets are handled properly, and dependencies are clean.
-- **3 (weak):** No obvious hole on the happy path, but missing defense in depth: weak headers and cookies, inconsistent authorization checks, and some risky patterns that are one mistake away from a vulnerability.
+- **Strong:** Authorization is enforced server-side on every resource, the usual attack classes are closed by design, secrets are handled properly, and dependencies are clean.
+- **Weak:** No obvious hole on the happy path, but missing defense in depth: weak headers and cookies, inconsistent authorization checks, and some risky patterns that are one mistake away from a vulnerability.
