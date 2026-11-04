@@ -29,7 +29,7 @@ The other specialists cover [their names]. Stay in your specialty unless somethi
 - **Target:** [run command or URL, file paths, or repo paths and diff]
 - **Ownership:** [one or more of: "ours, running: a local or development instance you may probe, with your test data in [where]"; "ours, code: run its tests, benches and scripts, with build output in its usual build folders; the lead makes every change"; "ours, files: read them and run read-only commands; the lead makes every change"; "ours, but it can't be changed here: inspect only, your findings become recommendations"; "not ours: observe as an ordinary user"]
 - **Shared evidence:** [screenshots, check output, design files]
-- **Comparisons:** [r0 and c passes: each product with how to reach it and its screenshots, or "none". Later rounds: "none"]
+- **Comparisons:** [r0 and c passes: each product with how to reach it and its screenshots, or "none". When the target is images, or a comparison's access is limited, add: "Judge [product] only on [these screenshots or surfaces], against the same screens of the target." Later rounds: "none"]
 - **Available tools:** [what the lead confirmed: such as Playwright with Chromium, ffmpeg, a display, and the paths of related skills or "not installed"]
 - **Evidence folder:** [path]. Save what you capture here and cite it by path.
 
