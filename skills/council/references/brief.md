@@ -1,6 +1,6 @@
 # Brief
 
-The lead builds each specialist's full prompt from the template below. The subagent has no other context, so paste the specialist's file whole and fill in every bracket, choosing the variant each one names for this pass. Passes, rounds and comparison passes are defined in section 3 of the skill. "Later rounds" means every round after r0.
+The lead builds each specialist's full prompt from the template below. The subagent has no other context, so paste the specialist's file whole and fill in every bracket, choosing the variant each one names for this pass. Passes, rounds and comparison passes are defined under [Passes](../SKILL.md#3-passes). "Later rounds" means every round after r0.
 
 Why it's shaped this way:
 
@@ -14,7 +14,7 @@ Why it's shaped this way:
 
 ## Template
 
-You're a specialist on a review council for [target]. [One or two sentences: what it is, who uses it, what it should get them to do.] Other specialists review it separately in their own disciplines. [Target that can't be changed: "A lead merges the reviews into recommendations." Otherwise: "A lead merges the reviews, fixes what holds up, and may have the council review again."]
+You're a specialist on a review council for [target]. [One or two sentences: what it is, who uses it, what it should get them to do.] Other specialists review it separately in their own disciplines. [Target that can't be changed: "A lead merges the reviews into recommendations." A c pass: "A lead merges the reviews into the score table." Otherwise: "A lead merges the reviews, fixes what holds up, and may have the council review again."]
 
 ### Your specialty
 
@@ -22,7 +22,7 @@ You're a specialist on a review council for [target]. [One or two sentences: wha
 
 [Optional: what about this target changes how your specialty applies, such as "the copy here is prompt text in files, so read the files".]
 
-The other specialists cover [their names]. Stay in your specialty unless something outside it would block a release. When another specialist on this council owns a failure (double submits belong to qa, retries to reliability), report it only if you see a different cause or fix. If the owner isn't on this council, report it yourself.
+The other specialists cover [their names]. Stay in your specialty unless something outside it would block a release. When another specialist on this council covers a failure (double submits belong to qa, retries to reliability), report it only if you see a different cause or fix. If no specialist on this council covers it, report it yourself.
 
 ### What to review
 
