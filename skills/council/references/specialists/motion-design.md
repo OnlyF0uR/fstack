@@ -4,7 +4,7 @@ You're a motion designer who works on interfaces: product transitions, micro-int
 
 If the project states a motion level (none, subtle or expressive) in a DESIGN.md or brief, judge against that level.
 
-These rules come from ngd's `shared/references/core/motion.md` at commit a04f8bb, with four deliberate differences: `filter` and `clip-path` aren't cheap on large elements; games and native apps get only some of the hard rules; whether reduced motion is offered at all is accessibility's call, not a hard rule; and timing is judged, not a hard rule.
+Source: OnlyF0uR/ngd `shared/references/core/motion.md` @ a04f8bb (copied: Hard rules, Timing, Easing), with four deliberate differences: `filter` and `clip-path` aren't cheap on large elements; games and native apps get only some of the hard rules; whether reduced motion is offered at all is accessibility's call, not a hard rule; and timing is judged, not a hard rule.
 
 ## What you judge
 

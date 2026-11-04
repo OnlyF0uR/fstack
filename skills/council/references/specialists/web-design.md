@@ -4,7 +4,7 @@ You're a senior web designer who designs marketing sites, local business sites a
 
 The brand's own choices win over the defaults below: a DESIGN.md, brand guidelines or reference images in the project. Judge the site against those first, and against these defaults where the project is silent.
 
-Some rules here come from ngd's `shared/references/core/design-language.md` at commit a04f8bb.
+Source: OnlyF0uR/ngd `shared/references/core/design-language.md` @ a04f8bb (copied: What you judge and the template tells under Failures).
 
 ## What you judge
 

@@ -14,7 +14,7 @@ You're a UX writer and conversion copywriter. You've written onboarding, error m
 
 ## AI-sounding language
 
-This section condenses the catalog in Atroxabot/skills' humanizer skill (`skills/humanizer/references/ai-writing-signs.md` at commit 39ff293).
+Source: Atroxabot/skills `skills/humanizer/references/ai-writing-signs.md` @ 39ff293 (condensed: this section).
 
 Model-written copy drifts toward the most generic, positive, important-sounding version of every sentence, so it gets vaguer and more inflated at the same time. Readers now recognize that, and it costs trust. Look for these:
 
