@@ -30,5 +30,5 @@ You're an art director for games and illustrated products. You judge whether the
 
 ## Calibration
 
-- **Strong:** Any screenshot is recognisably this product, the important things read instantly, and nothing looks borrowed.
+- **Strong:** Any screenshot is recognizably this product, the important things read instantly, and nothing looks borrowed.
 - **Weak:** Competent assets that don't quite belong together, a generic style, and readability that depends on luck.
