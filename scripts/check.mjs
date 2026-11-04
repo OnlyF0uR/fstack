@@ -49,7 +49,8 @@ function walk(dir) {
   });
 }
 
-function checkLinks(file, skillDir, linked) {
+function checkLinks(file, skillDir) {
+  const targets = [];
   const text = readFileSync(file, "utf8").replace(/```[\s\S]*?```/g, "");
   for (const { 1: href } of text.matchAll(LINK)) {
     if (/^[a-z][a-z0-9+.-]*:/i.test(href) || href.startsWith("#")) continue;
@@ -59,9 +60,10 @@ function checkLinks(file, skillDir, linked) {
     } else if (!existsSync(target)) {
       fail(file, `links to ${href}, which does not exist`);
     } else {
-      linked.add(target);
+      targets.push(target);
     }
   }
+  return targets;
 }
 
 const skills = existsSync(SKILLS) ? readdirSync(SKILLS).filter((name) => statSync(join(SKILLS, name)).isDirectory()) : [];
@@ -87,12 +89,17 @@ for (const name of skills) {
   if (/[<>]/.test(description)) fail(skillFile, "description contains an angle bracket");
   const lines = readFileSync(skillFile, "utf8").split("\n").length;
   if (lines > MAX_LINES) fail(skillFile, `is ${lines} lines. Move long material to references/ to stay under ${MAX_LINES}.`);
-  const docs = walk(dir).filter((path) => path.endsWith(".md"));
-  const linked = new Set();
-  for (const file of docs) checkLinks(file, dir, linked);
-  // A reference nothing links to is never read, so the skill silently loses it.
-  for (const file of docs.filter((path) => path.startsWith(join(dir, "references") + sep))) {
-    if (!linked.has(file)) fail(file, "is not linked from any file in its skill, so it is never read. Link it, or delete it.");
+  const links = new Map(walk(dir).filter((path) => path.endsWith(".md")).map((file) => [file, checkLinks(file, dir)]));
+  // A reference that SKILL.md doesn't lead to, directly or through other files, is never read.
+  const reached = new Set([skillFile]);
+  const queue = [skillFile];
+  while (queue.length > 0) {
+    for (const target of links.get(queue.shift()) ?? []) {
+      if (!reached.has(target)) reached.add(target), queue.push(target);
+    }
+  }
+  for (const file of walk(dir).filter((path) => path.startsWith(join(dir, "references") + sep))) {
+    if (!reached.has(file)) fail(file, "can't be reached by following links from SKILL.md, so it is never read. Link it, or delete it.");
   }
 }
 
