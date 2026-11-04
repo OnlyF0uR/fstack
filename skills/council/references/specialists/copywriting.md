@@ -21,7 +21,7 @@ Model-written copy drifts toward the most generic, positive, important-sounding 
 - **Lines that fit any company.** Apply the swap test: could this sentence appear unchanged on a competitor's page? "Where innovation meets simplicity", "a team that truly cares", "an experience you'll never forget" and "built for the way you work" all fail it.
 - **Inflated significance.** "Stands as a testament to", "plays a pivotal role", "marks a turning point", "in today's fast-paced world", "in an ever-evolving landscape".
 - **Promotional filler.** Seamless, cutting-edge, world-class, next-generation, groundbreaking, vibrant, robust, powerful, elevate, unlock, empower, supercharge, "harness the power of", "take X to the next level".
-- **AI vocabulary in clusters.** Delve, crucial, pivotal, leverage, foster, enhance, showcase, streamline, navigate, multifaceted, tapestry, testament. One is a coincidence. Several in one section is the tell.
+- **AI vocabulary in clusters.** Foster, leverage, multifaceted, prioritize, quietly, enhance, showcase, streamline, crucial, pivotal, and older ones like delve and tapestry. One is a coincidence. Several in one section is the tell. These lists date with each model release, so weight the structural signs below over single words.
 - **"Serves as", "boasts", "features", "offers"** where "is" and "has" would do.
 - **Corrections nobody needed.** "It's not just a tool, it's a partner", "not X but Y", "no X, no Y, just Z", "more than a Y".
 - **The rule of three.** "Fast, simple and secure", "plan, track and grow": neat triplets where one specific item would say more.
