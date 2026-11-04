@@ -1,6 +1,6 @@
 ---
 name: council
-description: Runs a council of specialist reviewer subagents over an app, game, design or codebase. Picks every specialist from its roster that applies to the target, such as visual design, motion design, humanoid animation, rendering, accessibility, conversion, security or Rust, and each one judges the target by its own discipline's standards and scores it out of 10. Round 0 is the baseline, then the lead fixes what the council found and the specialists score again in round 1 and round 2, with screenshots and the project's checks each round. Other products the user names are scored by the same specialists for comparison. Ends with a verdict and a score table. Use whenever the user mentions the council, such as "use the council", "ask the council", "council review", "let the council score this" or "add these to the council table".
+description: Runs a council of specialist reviewer subagents over an app, game, design or codebase. Picks every specialist from its roster that applies to the target, such as web design, motion design, humanoid animation, rendering, accessibility, conversion, security or Rust, and each one judges the target by its own discipline's standards and scores it out of 10. Round 0 is the baseline, then the lead fixes what the council found and the specialists score again in round 1 and round 2, with screenshots and the project's checks each round. Other products the user names are scored by the same specialists for comparison. Ends with a verdict and a score table. Use whenever the user mentions the council, such as "use the council", "ask the council", "council review", "let the council score this" or "add these to the council table".
 ---
 
 # Council
@@ -19,7 +19,8 @@ Post the target, comparisons, specialists and agent count (specialists × 3 roun
 
 | Specialist | Applies when the target has |
 |---|---|
-| [visual-design](references/specialists/visual-design.md) | a user interface |
+| [web-design](references/specialists/web-design.md) | a website or store for visitors (instead of visual-design) |
+| [visual-design](references/specialists/visual-design.md) | an app, panel, tool or game interface (instead of web-design) |
 | [ux-product](references/specialists/ux-product.md) | screens a user moves through to get something done |
 | [copywriting](references/specialists/copywriting.md) | text a user reads: headings, labels, errors, marketing |
 | [motion-design](references/specialists/motion-design.md) | transitions, animated UI or loading motion |
@@ -33,7 +34,6 @@ Post the target, comparisons, specialists and agent count (specialists × 3 roun
 | [web-performance](references/specialists/web-performance.md) | pages served to a browser |
 | [seo](references/specialists/seo.md) | public pages meant to be found through search |
 | [qa](references/specialists/qa.md) | anything that runs |
-| [frontend-engineering](references/specialists/frontend-engineering.md) | frontend source code |
 | [rust](references/specialists/rust.md) | Rust source code |
 | [code-correctness](references/specialists/code-correctness.md) | source code with logic and tests |
 | [software-architecture](references/specialists/software-architecture.md) | a codebase or public API beyond a few files |
