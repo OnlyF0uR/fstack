@@ -9,7 +9,7 @@ When changes go in quickly and nobody reviews them, two things keep the code hea
 | [four-mode](./skills/four-mode) | `fstack` | The working style. Acts without asking on reversible work, counts a change as done only with real check output in the reply, reproduces bugs and fixes them where they start, and proves the one fact a risky change is safe because of. Routes Rust to rust-dev and rust-gui, web builds to the ngd skills, and prose to humanizer. |
 | [reflect](./skills/reflect) | `fstack` | Reviews a session for lessons and edits the skill that owns each one: four-mode for working style, the Atroxabot or ngd skill for domain knowledge. Shows the edits for one approval, then commits them in each skill's source repository. |
 | [correct](./skills/correct) | `fstack` | Makes a mistake agents keep repeating in a project impossible to repeat, at the strongest level that works: the design, types, a clippy or ESLint check whose error names the fix, a test, a Claude Code hook, and a written rule only last. Proves each check fails on the real mistake. |
-| [council](./skills/council) | `fstack-extras` | Reviews an app, game, design or codebase with every specialist from its roster that applies, such as motion design, humanoid animation, rendering, accessibility or security. Each one scores it on a 1–7 scale by its own discipline. Round 0 is the baseline, and the lead fixes and rescores in round 1 and round 2, with screenshots and the project's checks. Products you name are scored alongside for comparison. Starts whenever you mention the council. |
+| [council](./skills/council) | `fstack-extras` | Reviews an app, game, design or codebase with every specialist from its roster that applies, such as motion design, humanoid animation, rendering, accessibility or security. Each one scores it on a 1–7 scale by its own discipline. Round 0 is the baseline. The lead fixes what they found, and fresh specialists score it again in round 1 and round 2. Products you name are scored alongside for comparison. Starts whenever you ask for the council. |
 
 ## How the three fit together
 
@@ -17,7 +17,7 @@ When changes go in quickly and nobody reviews them, two things keep the code hea
 2. When you correct the agent for the same thing twice, run `/fstack:correct`. The fix lands in the project as a check, so the next session can't repeat it.
 3. When a skill gave wrong or missing guidance, or a session took far longer than it should have, run `/fstack:reflect` at the end. The fix lands in the skill.
 
-All three run only when you type them (`disable-model-invocation: true`), so they never start on their own in the middle of other work. council, in `fstack-extras`, is the exception: it starts whenever you mention the council.
+All three run only when you type them (`disable-model-invocation: true`), so they never start on their own in the middle of other work. Unlike those three, council (in `fstack-extras`) starts whenever you ask for the council.
 
 ## Install
 

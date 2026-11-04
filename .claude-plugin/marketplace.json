@@ -23,7 +23,7 @@
       "name": "fstack-extras",
       "source": "./",
       "strict": false,
-      "description": "Personal skills outside the core loop: council (independent reviewers score an app, design or codebase over three rounds)",
+      "description": "Personal skills outside the core loop, such as council",
       "author": { "name": "OnlyF0uR" },
       "repository": "https://github.com/OnlyF0uR/fstack",
       "keywords": ["review", "council", "scoring"],
