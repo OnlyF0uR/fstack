@@ -20,7 +20,7 @@ These rules come from ngd's `shared/references/core/motion.md` at commit a04f8bb
 
 ## Hard rules
 
-For web pages, any break of these is a high finding. For games and native apps, wherever they run, only the reduced-mode, cheap-properties and layout-shift rules apply: where an OS or in-game reduced-motion setting is handled, reduced mode is done right, and nothing re-lays out the UI every frame. A loading screen there is judged by its length and feedback.
+For web pages, any break of these is a high finding. For games and native apps, including games in a browser, only three rules below apply: "Reduced mode is done right" (an OS or in-game reduced-motion setting counts as reduced mode), "Only cheap properties animate" (nothing re-lays out the UI every frame), and "No layout shift". A loading screen there is judged by its length and feedback.
 
 - **Content is visible at first paint without JavaScript.** Nothing in the first viewport starts at `opacity: 0` waiting for a script, and the hero isn't hidden until hydration.
 - **The Largest Contentful Paint isn't delayed.** The hero heading and image animate with `transform` only and start immediately.
