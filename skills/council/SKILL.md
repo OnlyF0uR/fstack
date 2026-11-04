@@ -1,68 +1,79 @@
 ---
 name: council
-description: Runs a council of independent reviewer subagents over an app, site, design or codebase. Each member gets one lens chosen to fit the target and scores it out of 10 on factors picked for that target, with evidence. Round 0 is the baseline, then the lead fixes what the council found and the members score again in round 1 and round 2, with screenshots and the project's checks each round. Other products the user names are scored on the same factors so the table compares them. Ends with a verdict and a score table. Use whenever the user mentions the council, such as "use the council", "ask the council", "council review", "let the council score this" or "add X and Y to the council table".
+description: Runs a council of specialist reviewer subagents over an app, game, design or codebase. Picks every specialist from its roster that applies to the target, such as visual design, motion design, humanoid animation, rendering, accessibility, conversion, security or Rust, and each one judges the target by its own discipline's standards and scores it out of 10. Round 0 is the baseline, then the lead fixes what the council found and the specialists score again in round 1 and round 2, with screenshots and the project's checks each round. Other products the user names are scored by the same specialists for comparison. Ends with a verdict and a score table. Use whenever the user mentions the council, such as "use the council", "ask the council", "council review", "let the council score this" or "add these to the council table".
 ---
 
 # Council
 
-A council is a few reviewers who each look at the same target through one lens, without seeing each other's work, and score it on shared factors. Separate contexts are the point. One reviewer drifts toward its first impression, while three with different lenses disagree in useful places. You are the lead: you set the council up, gather the evidence, apply the fixes and write the report. The members only look and score.
+Specialists review the same target separately, each through their own discipline, and score it. A specialist prompt with a practitioner's standards and methods finds more than a general reviewer does. You are the lead: you pick the specialists, gather evidence, fix, and report. Specialists only observe and score.
 
-## 1. Set up
+## 1. Pick the council
 
-Work these out from the request and the target, state them in a few lines, and start. Don't wait for approval, since a wrong choice costs one round.
+- **Target:** what's under review: a running app, a game, a design, or code.
+- **Comparisons:** other products the user names. Scored by the same specialists, never changed.
+- **Specialists:** every roster entry whose "applies when" fits the target. Skip any that would have nothing to inspect, since they can only guess. Add any the user names. If the target needs a discipline the roster lacks, write that specialist in the same shape as the roster files and say in the report that the roster should get it.
 
-- **Target.** The thing being reviewed: a running app or URL, a design (mockup, screenshot, Figma export, artifact), or code (a repo, a feature, a diff).
-- **Comparisons.** Other products the user names ("also look at site X and site Y"). They're scored on the same factors but never changed.
-- **Members.** Three by default, and up to five only when the target spans more lenses than that. Pick lenses that fit this target and don't overlap, because two members with the same lens produce the same findings at twice the cost. If the user names members, use theirs. Some examples:
+Post the target, comparisons, specialists and agent count (specialists × 3 rounds) in a few lines, then start without waiting.
 
-  | Target | Lenses that usually fit |
-  |---|---|
-  | Web app or site | visual designer, product and UX, frontend engineer |
-  | Design with no code yet | visual designer, UX and flows, copy and brand |
-  | Code, a library or a backend | correctness and tests, architecture and API, security and operability |
-  | Store or landing page | conversion, visual designer, performance and accessibility |
+### Roster
 
-- **Factors.** Four to seven things to score, chosen for this target and the user's goal, so a checkout gets "trust" and "checkout friction" while a library gets "API clarity" and "error handling". Use the user's factors if they give any. For each factor, write one line on what a 9 looks like and one on what a 5 looks like. Every member scores every product in every round against those same anchors, which is what makes the numbers comparable.
+| Specialist | Applies when the target has |
+|---|---|
+| [visual-design](references/specialists/visual-design.md) | a user interface |
+| [ux-product](references/specialists/ux-product.md) | screens a user moves through to get something done |
+| [copywriting](references/specialists/copywriting.md) | text a user reads: headings, labels, errors, marketing |
+| [motion-design](references/specialists/motion-design.md) | transitions, animated UI or loading motion |
+| [humanoid-animation](references/specialists/humanoid-animation.md) | animated humanoid characters |
+| [game-feel](references/specialists/game-feel.md) | real-time player control |
+| [art-direction](references/specialists/art-direction.md) | a visual style that is part of the product: a game, illustration, 3D |
+| [realtime-rendering](references/specialists/realtime-rendering.md) | its own rendering or GPU code |
+| [conversion](references/specialists/conversion.md) | a purchase, sign-up or other funnel |
+| [data-visualization](references/specialists/data-visualization.md) | charts, dashboards or KPIs |
+| [accessibility](references/specialists/accessibility.md) | a user interface |
+| [web-performance](references/specialists/web-performance.md) | pages served to a browser |
+| [seo](references/specialists/seo.md) | public pages meant to be found through search |
+| [qa](references/specialists/qa.md) | anything that runs |
+| [frontend-engineering](references/specialists/frontend-engineering.md) | frontend source code |
+| [rust](references/specialists/rust.md) | Rust source code |
+| [code-correctness](references/specialists/code-correctness.md) | source code with logic and tests |
+| [software-architecture](references/specialists/software-architecture.md) | a codebase or public API beyond a few files |
+| [security](references/specialists/security.md) | auth, user data, payments, uploads, or network exposure |
+| [reliability](references/specialists/reliability.md) | a service or worker that runs unattended |
+| [systems-performance](references/specialists/systems-performance.md) | code where speed or memory matters outside a browser |
 
 ## 2. Evidence
 
-Gather the shared evidence yourself before each round, so every member judges the same state:
+Before each round, gather what every specialist shares, so they judge the same state:
 
-- **Anything with a screen:** screenshots of the main screens and the main flow at desktop (1440 wide) and phone (390 wide) width, using Playwright or whatever the project already uses. Take them for the comparisons too in round 0. Name the files by product, round and screen, such as `ours-r1-pricing-390.png`.
-- **A design:** the files themselves, plus any brief or notes that came with them.
-- **Code:** the paths in scope, the diff if there is one, and the output of the project's checks.
+- **A screen:** screenshots of the main screens and flow at desktop and phone size (or the app's window sizes), named by product, round and screen, like `ours-r1-checkout-390.png`. In round 0, the same set for each comparison.
+- **A running app:** start it and pass the URL or run command.
+- **A design:** the files and any brief.
+- **Code:** the paths in scope, the diff, and the project's check output.
 
-Members may look further on their own (open the app, read more code), but only to read.
+Give each specialist its own evidence folder for what it captures (video, traces, audit output).
 
 ## 3. Rounds
 
-There are three rounds: **round 0** is the baseline, then **round 1** and **round 2** each come after a set of fixes. The comparisons are scored in round 0 only, alongside the target and by the same members, so all products land on one scale. Their scores carry forward unchanged.
+Round 0 is the baseline. Round 1 and round 2 each follow a set of fixes. Comparisons are scored only in round 0, in the same pass as the target, so all products share one scale.
 
-For each round:
+Each round:
 
-1. **Brief the members** with [references/member-brief.md](references/member-brief.md), filled in for this target and round. Spawn them all in one message so they run in parallel, and spawn new ones each round. A member who remembers its last score anchors on it. In round 1 and round 2, include the previous round's findings for the members to check, but not the scores.
-2. **Collect.** For each factor, the score is the median of the members who scored it. The overall score is the mean of the factor scores, to one decimal. A member who gave no score for something is recorded as "no score". Never fill in a number for them.
-3. **Choose fixes** (after round 0 and round 1 only). Fix the findings you agree with that are rated high, or raised by two or more members. Leave out anything that changes what the product does or how it should feel, such as pricing, positioning or a new feature, and list it for the user instead. Keep fixes inside the target, because a council round invites scope creep.
-4. **Fix and prove it.** Make the fixes, run the project's checks, and retake the screenshots. If a fix breaks a check, revert it and note that in the report. Don't push it through. In a repository, commit each round's fixes on their own so a bad round is easy to undo.
+1. **Brief.** Build each prompt from [references/brief.md](references/brief.md) with the specialist's roster file pasted in whole, since subagents can't read this skill's files. Spawn all specialists in one message. Spawn new ones each round, because a specialist that remembers its score anchors on it. From round 1, include that specialist's previous findings but not its scores.
+2. **Collect** one score per specialist per product. Record "no score" where none was given, never a number of your own.
+3. **Fix** (after rounds 0 and 1). Fix findings you agree with that are high severity or raised by two or more specialists. Where specialists conflict, decide and note the trade-off. Don't change what the product does or how it should feel (pricing, positioning, new features): list those for the user.
+4. **Prove.** Run the project's checks and retake the screenshots. Revert any fix that breaks a check. Commit each round separately.
 
-Stop early only if, after round 1, every factor is at 9 or higher and no high finding is open. Say so in the report.
-
-When the target can't be changed from here (someone else's site, or a design you have only as images), run round 0 only and report recommendations instead of fixes.
+Skip round 2 only if every round 1 score is 9 or higher with no high finding open, and say so. If the target can't be changed from here, run round 0 only and report recommendations.
 
 ## 4. Report
 
-Give the user, in the final reply:
+1. **Verdict:** two or three sentences on where the target stands, what moved it, and how it compares.
+2. **Score table:** one row per specialist, plus a mean row. Columns are the target's rounds, then one column per comparison, named after that product. The last column says what drove the final score. With no comparisons, the table has only the round columns:
 
-1. **The verdict** in two or three sentences: where the target stands, what moved it, and how it compares.
-2. **The score table.** Factors are rows and products and rounds are columns, with an overall row at the bottom:
+   | Specialist | R0 | R1 | R2 | Comparison name | … | What drove it |
+   |---|---|---|---|---|---|---|
 
-   | Factor | Ours R0 | Ours R1 | Ours R2 | Site X | Site Y |
-   |---|---|---|---|---|---|
-   | Clarity of the main action | 5 | 7 | 8 | 7 | 6 |
-   | Overall | 5.4 | 6.9 | 7.8 | 7.1 | 6.2 |
+3. **Changes:** what was fixed each round, what was reverted and why, and the before and after evidence paths.
+4. **Open:** remaining high findings, specialist conflicts, and decisions for the user, each with your recommendation.
 
-3. **The members table**, with each member's overall score per round, so the user can see whose view moved and whose didn't.
-4. **What changed** in each round, what was reverted and why, and the paths of the before and after screenshots.
-5. **What's still open**: the remaining high findings, and the product and taste calls left for the user, each with your recommendation.
-
-If the work is in a pull request, add the same tables to its description under "Council review".
+If the work is in a pull request, put the table in its description under "Council review".
