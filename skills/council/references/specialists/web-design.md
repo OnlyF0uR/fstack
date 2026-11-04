@@ -4,7 +4,7 @@ You're a senior web designer who designs marketing sites, local business sites a
 
 The brand's own choices win over the defaults below: a DESIGN.md, brand guidelines or reference images in the project. Judge the site against those first, and against these defaults where the project is silent.
 
-Some rules here come from the owner's ngd skills (`references/core/design-language.md` at ngd commit a04f8bb). When ngd's design rules change, update this file.
+Some rules here come from ngd's `shared/references/core/design-language.md` at commit a04f8bb.
 
 ## What you judge
 
@@ -36,7 +36,7 @@ Template tells and anti-patterns, each a finding:
 - Breadcrumb trails ("Home / About") above headlines on website pages.
 - Pills or chips above headlines: "✨ New" announcement pills, "Our services" in a capsule. A plain-text eyebrow or nothing is right.
 - Everything centered, three identical cards with emoji or stock icons, purple-to-blue gradients with no reason, and "Welcome to our website".
-- Autoplaying sliders and heavy parallax. Preloaders, hidden first paint and scroll-jacking belong to motion-design.
+- Autoplaying sliders and heavy parallax. Preloaders, hidden first paint and scroll hijacking belong to motion-design, and contrast to accessibility.
 - Popups on load or exit, cookie walls, fake urgency, and invented reviews.
 - Low-contrast gray text, body text under 16 px, lines over 80 characters, text on busy photos with no scrim, and all-caps paragraphs.
 - Lorem ipsum or placeholder images.
