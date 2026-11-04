@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // Checks that every skill installs and loads on its own: frontmatter, size, links that stay inside the skill folder,
-// exactly one plugin per skill in marketplace.json, and the README table. Exits 1 and prints each problem when
+// references reachable from SKILL.md, exactly one plugin per skill in marketplace.json, and the README table. Exits 1 and prints each problem when
 // something is off. With --hook it runs as the repo's Claude Code Stop hook: silent when everything passes, exit 2
 // with the problems on stderr when not, so the agent fixes them before it finishes.
 
@@ -50,6 +50,7 @@ function walk(dir) {
 }
 
 function checkLinks(file, skillDir) {
+  const targets = [];
   const text = readFileSync(file, "utf8").replace(/```[\s\S]*?```/g, "");
   for (const { 1: href } of text.matchAll(LINK)) {
     if (/^[a-z][a-z0-9+.-]*:/i.test(href) || href.startsWith("#")) continue;
@@ -58,8 +59,11 @@ function checkLinks(file, skillDir) {
       fail(file, `links to ${href}, outside the skill folder. A skill must work when installed on its own.`);
     } else if (!existsSync(target)) {
       fail(file, `links to ${href}, which does not exist`);
+    } else {
+      targets.push(target);
     }
   }
+  return targets;
 }
 
 const skills = existsSync(SKILLS) ? readdirSync(SKILLS).filter((name) => statSync(join(SKILLS, name)).isDirectory()) : [];
@@ -85,7 +89,18 @@ for (const name of skills) {
   if (/[<>]/.test(description)) fail(skillFile, "description contains an angle bracket");
   const lines = readFileSync(skillFile, "utf8").split("\n").length;
   if (lines > MAX_LINES) fail(skillFile, `is ${lines} lines. Move long material to references/ to stay under ${MAX_LINES}.`);
-  for (const file of walk(dir).filter((path) => path.endsWith(".md"))) checkLinks(file, dir);
+  const links = new Map(walk(dir).filter((path) => path.endsWith(".md")).map((file) => [file, checkLinks(file, dir)]));
+  // A reference that SKILL.md doesn't lead to, directly or through other files, is never read.
+  const reached = new Set([skillFile]);
+  const queue = [skillFile];
+  while (queue.length > 0) {
+    for (const target of links.get(queue.shift()) ?? []) {
+      if (!reached.has(target)) reached.add(target), queue.push(target);
+    }
+  }
+  for (const file of walk(dir).filter((path) => path.startsWith(join(dir, "references") + sep))) {
+    if (!reached.has(file)) fail(file, "can't be reached by following links from SKILL.md, so it is never read. Link it, or delete it.");
+  }
 }
 
 if (existsSync(join(MANIFESTS, "plugin.json"))) {
