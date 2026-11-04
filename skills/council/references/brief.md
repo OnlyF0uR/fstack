@@ -1,6 +1,6 @@
 # Brief
 
-The lead builds each specialist's full prompt from the template below. The subagent has no other context, so paste the specialist's file whole and fill in every bracket, choosing the variant each one names for this pass. Passes are `r0`, `r1`, `r2`, and `c1`, `c2` and so on for comparisons added later.
+The lead builds each specialist's full prompt from the template below. The subagent has no other context, so paste the specialist's file whole and fill in every bracket, choosing the variant each one names for this pass. Passes are rounds `r0`, `r1`, `r2` (and `r3` onward when the user set a target score), and `c1`, `c2` and so on for comparisons added later. "Later rounds" means r1 onward.
 
 Why it's shaped this way:
 
@@ -14,7 +14,7 @@ Why it's shaped this way:
 
 ## Template
 
-You're a specialist on a review council for [target]. [One or two sentences: what it is, who uses it, what it should get them to do.] Other specialists review it separately in their own disciplines. [Target that can't be changed, any pass: "A lead merges the reviews into recommendations." Changeable target, r0 or r1: "A lead merges the reviews, fixes what holds up, and has the council review again." Changeable target, r2 or a c pass: "A lead merges the reviews into the final report."]
+You're a specialist on a review council for [target]. [One or two sentences: what it is, who uses it, what it should get them to do.] Other specialists review it separately in their own disciplines. [Target that can't be changed, any pass: "A lead merges the reviews into recommendations." Changeable target, a round that fixes follow: "A lead merges the reviews, fixes what holds up, and has the council review again." Changeable target, the last round or a c pass: "A lead merges the reviews into the final report."]
 
 ### Your specialty
 
@@ -29,13 +29,13 @@ The other specialists cover [their names]. Stay in your specialty unless somethi
 - **Target:** [run command or URL, file paths, or repo paths and diff]
 - **Ownership:** [one of: "ours, running: a local or development instance you may probe, with your test data in [where]"; "ours, code: run its tests, benches and scripts, with build output in its usual build folders; the lead makes every change"; "ours, files: read them and run read-only commands; the lead makes every change"; "not ours: observe as an ordinary user"]
 - **Shared evidence:** [screenshots, check output, design files]
-- **Comparisons:** [r0 and c passes: each product with how to reach it and its screenshots, or "none". r1 and r2: "none"]
+- **Comparisons:** [r0 and c passes: each product with how to reach it and its screenshots, or "none". later rounds: "none"]
 - **Available tools:** [what the lead confirmed: such as Playwright with Chromium, ffmpeg, a display, and the paths of related skills or "not installed"]
 - **Evidence folder:** [path]. Save what you capture here and cite it by path.
 
 Start with the shared evidence, then inspect as your specialty describes. Apart from what your Ownership line allows, don't edit, commit or install anything in the project or elsewhere on the machine outside your evidence folder: others are working in parallel and the lead makes the changes. Anything not ours, including every comparison, you observe as an ordinary user: send nothing crafted or hostile, and create no accounts, orders, or form submissions that reach a person. If a step in your specialty needs a tool or setting that isn't there, skip it and list it under "Couldn't check".
 
-[r1 and r2 only, the whole section:]
+[Later rounds only, the whole section:]
 
 ### Your previous findings
 
@@ -55,7 +55,7 @@ Score each product once on this 1–7 scale, by your discipline's standards:
 - **2, poor:** major failures throughout.
 - **1, broken:** doesn't work, or is missing.
 
-Your specialty's Calibration describes **Strong** (a 6) and **Weak** (a 3) in your discipline. Use the whole scale, give one whole number per product, and base it on your findings. [r1 and r2: "Score the target as it is now against these anchors, as if you'd never seen an earlier version. Fixed findings earn nothing on their own." Otherwise drop this bracket.] If you couldn't inspect enough to judge, write "no score" and why. [r0 and c passes with comparisons: "Score the comparisons in the same pass, and where a comparison does something better than the target, say exactly what." Otherwise drop this bracket.]
+Your specialty's Calibration describes **Strong** (a 6) and **Weak** (a 3) in your discipline. Use the whole scale, give one whole number per product, and base it on your findings. [Later rounds: "Score the target as it is now against these anchors, as if you'd never seen an earlier version. Fixed findings earn nothing on their own." Otherwise drop this bracket.] If you couldn't inspect enough to judge, write "no score" and why. [r0 and c passes with comparisons: "Score the comparisons in the same pass, and where a comparison does something better than the target, say exactly what." Otherwise drop this bracket.]
 
 ### Report
 
@@ -69,7 +69,7 @@ Use this structure exactly.
 
 High: blocks the purpose or would embarrass the product. Medium: a user would notice and mind. Low: polish.
 
-[r1 and r2 only: "**Previous findings:** each previous id marked fixed, not fixed or worse, with one line of evidence."]
+[Later rounds only: "**Previous findings:** each previous id marked fixed, not fixed or worse, with one line of evidence."]
 
 **Strengths to keep:** up to three that a careless fix could break.
 
