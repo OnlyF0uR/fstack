@@ -40,7 +40,8 @@ The fix is never a synonym swap. It's the specific fact the sentence was gesturi
 - Trigger the error and empty states (an invalid form, an empty search, a 404) and capture their text too.
 - Scan the extracted copy for AI-sounding language. If the humanizer skill is installed, run its scanner (`scripts/ai_signs.py` in that skill's folder) on the text file and read its catalog. Otherwise search the text for the words and phrases above. Either way, read the hero, headings and calls to action yourself, because content-level signs like the swap test need judgment.
 - Build a term list: every noun that names a product concept, and where each variant appears.
-- **Native apps, games and CLIs:** take the text from screenshots, string tables or locale files, `--help` output and error paths. For docs and prompts, read the files.
+- For native apps, games and CLIs, take the text from screenshots, string tables or locale files, `--help` output and error paths.
+- For docs and prompts, read the files.
 - For comparisons, put the hero sections side by side and judge which one a busy reader understands faster and which one sounds written by a person.
 
 ## Failures you're known for catching
