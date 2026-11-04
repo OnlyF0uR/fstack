@@ -1,6 +1,6 @@
 # fstack: working in this repo
 
-fstack is a Claude Code plugin marketplace for one person's way of working. The `fstack` plugin holds the core loop: four-mode (the working style), reflect (session lessons into skill edits) and correct (repeated mistakes into checks in a project). The `fstack-extras` plugin holds other personal skills, and appears with the first one. Domain skills live in their own repositories, Atroxabot/skills and OnlyF0uR/ngd. fstack refers to them by name and never copies them, because a copy drifts from its original.
+fstack is a Claude Code plugin marketplace for one person's way of working. The `fstack` plugin holds the core loop: four-mode (the working style), reflect (session lessons into skill edits) and correct (repeated mistakes into checks in a project). The `fstack-extras` plugin holds other personal skills, such as council. Domain skills live in their own repositories, Atroxabot/skills and OnlyF0uR/ngd. fstack refers to them by name and never copies them, because a copy drifts from its original.
 
 ## Layout
 
@@ -20,21 +20,7 @@ Whether a skill belongs in fstack at all is decided by the "New skills" table in
 1. **Pick the plugin.** `fstack` holds the core loop and anything those three skills need to work, because it's installed everywhere and every skill in it costs every session. Every other skill goes in `fstack-extras`, which can be left off without losing the core.
 2. **Create `skills/<name>/SKILL.md`.** The `name` equals the folder (kebab-case, at most 64 characters), and the `description` is at most 1024 characters with no angle brackets.
 3. **Decide how it starts.** A skill the model should pick up on its own needs a description that lists the phrases the user types, and that description goes into every session. A skill the user types as a command gets `disable-model-invocation: true`, so it never fires by surprise. Compare a new description with rust-dev, ngd and humanizer, because overlapping descriptions make the wrong skill fire.
-4. **Add `"./skills/<name>"` to that plugin's `skills` list** in `.claude-plugin/marketplace.json`. The first extra skill creates the `fstack-extras` entry:
-
-   ```json
-   {
-     "name": "fstack-extras",
-     "source": "./",
-     "strict": false,
-     "description": "Personal skills outside the core loop",
-     "author": { "name": "OnlyF0uR" },
-     "repository": "https://github.com/OnlyF0uR/fstack",
-     "skills": ["./skills/<name>"]
-   }
-   ```
-
-   Never leave a plugin with an empty `skills` list. Claude Code then loads every folder in `skills/`, so that plugin would install the core skills a second time.
+4. **Add `"./skills/<name>"` to that plugin's `skills` list** in `.claude-plugin/marketplace.json`. Never leave a plugin with an empty `skills` list. Claude Code then loads every folder in `skills/`, so that plugin would install the core skills a second time.
 5. **Add a row to the README table**, with the plugin in the second column.
 6. **Run `node scripts/check.mjs`.** It fails on a skill that no plugin lists, a skill in two plugins, an empty plugin, and a README row with the wrong plugin. The Stop hook runs the same check before Claude finishes a turn in this repo, so a skill can't be left half added.
 

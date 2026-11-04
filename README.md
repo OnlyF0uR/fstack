@@ -9,6 +9,7 @@ When changes go in quickly and nobody reviews them, two things keep the code hea
 | [four-mode](./skills/four-mode) | `fstack` | The working style. Acts without asking on reversible work, counts a change as done only with real check output in the reply, reproduces bugs and fixes them where they start, and proves the one fact a risky change is safe because of. Routes Rust to rust-dev and rust-gui, web builds to the ngd skills, and prose to humanizer. |
 | [reflect](./skills/reflect) | `fstack` | Reviews a session for lessons and edits the skill that owns each one: four-mode for working style, the Atroxabot or ngd skill for domain knowledge. Shows the edits for one approval, then commits them in each skill's source repository. |
 | [correct](./skills/correct) | `fstack` | Makes a mistake agents keep repeating in a project impossible to repeat, at the strongest level that works: the design, types, a clippy or ESLint check whose error names the fix, a test, a Claude Code hook, and a written rule only last. Proves each check fails on the real mistake. |
+| [council](./skills/council) | `fstack-extras` | Puts an app, site, design or codebase in front of a few independent reviewers, each with one lens chosen for the target. They score it on factors picked for that target, then the lead fixes what holds up and they score again: round 0 is the baseline, then round 1 and round 2, with screenshots and the project's checks each round. Other products you name are scored on the same factors for comparison. Starts whenever you mention the council. |
 
 ## How the three fit together
 
@@ -16,7 +17,7 @@ When changes go in quickly and nobody reviews them, two things keep the code hea
 2. When you correct the agent for the same thing twice, run `/fstack:correct`. The fix lands in the project as a check, so the next session can't repeat it.
 3. When a skill gave wrong or missing guidance, or a session took far longer than it should have, run `/fstack:reflect` at the end. The fix lands in the skill.
 
-All three run only when you type them (`disable-model-invocation: true`), so they never start on their own in the middle of other work.
+All three run only when you type them (`disable-model-invocation: true`), so they never start on their own in the middle of other work. council, in `fstack-extras`, is the exception: it starts whenever you mention the council.
 
 ## Install
 
@@ -37,7 +38,7 @@ four-mode routes to skills from two other marketplaces. Install those too:
 /plugin install ngd@ngd
 ```
 
-Personal skills outside the core loop go in a second plugin, `fstack-extras`, which appears with the first one. Install it with `/plugin install fstack-extras@fstack`, or leave it off and keep just the core.
+Personal skills outside the core loop, such as council, go in a second plugin, `fstack-extras`. Install it with `/plugin install fstack-extras@fstack`, or leave it off and keep just the core.
 
 To use one skill without the plugin, copy its folder into `~/.claude/skills/`. It's then `/four-mode` instead of `/fstack:four-mode`.
 
