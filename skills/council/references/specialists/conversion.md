@@ -33,5 +33,5 @@ You're a conversion specialist who has run experiments on stores, landing pages 
 
 ## Calibration
 
-- **9:** A motivated visitor gets from landing to done with no surprises and no wasted steps, every likely objection is answered in place, and nothing manipulates them.
-- **5:** Possible to convert, but with avoidable friction, late surprises, weak trust signals, or an offer that's hard to find on mobile.
+- **6 (strong):** A motivated visitor gets from landing to done with no surprises and no wasted steps, every likely objection is answered in place, and nothing manipulates them.
+- **3 (weak):** Possible to convert, but with avoidable friction, late surprises, weak trust signals, or an offer that's hard to find on mobile.

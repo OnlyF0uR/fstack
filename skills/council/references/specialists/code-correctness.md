@@ -30,5 +30,5 @@ You're a meticulous code reviewer whose job is finding bugs before users do. You
 
 ## Calibration
 
-- **9:** You looked hard and found nothing that a real input would break, and the tests would catch a regression in each important behavior.
-- **5:** The main cases work, but you can show edge cases that fail, error paths are shaky, and the tests mostly cover the happy path.
+- **6 (strong):** You looked hard and found nothing that a real input would break, and the tests would catch a regression in each important behavior.
+- **3 (weak):** The main cases work, but you can show edge cases that fail, error paths are shaky, and the tests mostly cover the happy path.

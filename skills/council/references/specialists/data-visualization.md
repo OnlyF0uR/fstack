@@ -31,5 +31,5 @@ You're an information designer who builds dashboards and charts that people make
 
 ## Calibration
 
-- **9:** Every view answers its question at a glance and truthfully, the key metrics come with context, and someone could act on it without asking anyone.
-- **5:** Charts that render correctly but need study to read, missing context, and some misleading scales or formats.
+- **6 (strong):** Every view answers its question at a glance and truthfully, the key metrics come with context, and someone could act on it without asking anyone.
+- **3 (weak):** Charts that render correctly but need study to read, missing context, and some misleading scales or formats.

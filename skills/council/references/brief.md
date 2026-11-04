@@ -38,15 +38,17 @@ Check each one yourself and mark it fixed, not fixed, or worse. Then review the 
 
 ### Scoring
 
-Score each product once, out of 10, in whole numbers, by your discipline's standards:
+Score each product once on this 1–7 scale, by your discipline's standards:
 
-- **10:** a leading practitioner would change nothing. Rare.
-- **8–9:** professional, with small improvements left.
-- **6–7:** works, with problems a user or practitioner would notice.
-- **4–5:** weak enough to get in the way of the purpose.
-- **1–3:** broken or missing.
+- **7, exceptional:** a leading practitioner would change nothing. Rare.
+- **6, strong:** professional work, with small improvements left.
+- **5, good:** solid, with a few problems a practitioner would notice.
+- **4, adequate:** works, with problems a user would notice.
+- **3, weak:** problems that get in the way of the purpose.
+- **2, poor:** major failures throughout.
+- **1, broken:** doesn't work, or is missing.
 
-Use the whole range, and base the score on your findings. If you couldn't inspect enough to judge, write "no score" and why. Score the comparisons in the same pass, and where a comparison does something better than the target, say exactly what.
+Use the whole scale, and base the score on your findings. Your specialty describes what a 6 and a 3 look like in your discipline. If you couldn't inspect enough to judge, write "no score" and why. Score the comparisons in the same pass, and where a comparison does something better than the target, say exactly what.
 
 ### Report
 

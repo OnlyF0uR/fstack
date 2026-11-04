@@ -31,5 +31,5 @@ You're a UX writer and conversion copywriter. You've written onboarding, error m
 
 ## Calibration
 
-- **9:** Every label, heading and message is specific and does a job. A new reader understands the offer and every action without having to guess.
-- **5:** Readable, but generic and inconsistent. The headline is interchangeable, the labels are default, and the errors don't help.
+- **6 (strong):** Every label, heading and message is specific and does a job. A new reader understands the offer and every action without having to guess.
+- **3 (weak):** Readable, but generic and inconsistent. The headline is interchangeable, the labels are default, and the errors don't help.

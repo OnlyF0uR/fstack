@@ -32,5 +32,5 @@ You're a graphics programmer who has shipped renderers on modern GPU APIs (wgpu,
 
 ## Calibration
 
-- **9:** A clean, correct image, steady frame times with headroom, no validation errors, and robust handling of every window event you threw at it.
-- **5:** The image looks roughly right, but has color-space or aliasing problems, the renderer stutters or wastes work each frame, and edge cases crash or warn.
+- **6 (strong):** A clean, correct image, steady frame times with headroom, no validation errors, and robust handling of every window event you threw at it.
+- **3 (weak):** The image looks roughly right, but has color-space or aliasing problems, the renderer stutters or wastes work each frame, and edge cases crash or warn.

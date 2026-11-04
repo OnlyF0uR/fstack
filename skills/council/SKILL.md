@@ -1,6 +1,6 @@
 ---
 name: council
-description: Runs a council of specialist reviewer subagents over an app, game, design or codebase. Picks every specialist from its roster that applies to the target, such as web design, motion design, humanoid animation, rendering, accessibility, conversion, security or Rust, and each one judges the target by its own discipline's standards and scores it out of 10. Round 0 is the baseline, then the lead fixes what the council found and the specialists score again in round 1 and round 2, with screenshots and the project's checks each round. Other products the user names are scored by the same specialists for comparison. Ends with a verdict and a score table. Use whenever the user mentions the council, such as "use the council", "ask the council", "council review", "let the council score this" or "add these to the council table".
+description: Runs a council of specialist reviewer subagents over an app, game, design or codebase. Picks every specialist from its roster that applies to the target, such as web design, motion design, humanoid animation, rendering, accessibility, conversion, security or Rust, and each one judges the target by its own discipline's standards and scores it on a 1–7 scale. Round 0 is the baseline, then the lead fixes what the council found and the specialists score again in round 1 and round 2, with screenshots and the project's checks each round. Other products the user names are scored by the same specialists for comparison. Ends with a verdict and a score table. Use whenever the user mentions the council, such as "use the council", "ask the council", "council review", "let the council score this" or "add these to the council table".
 ---
 
 # Council
@@ -63,7 +63,7 @@ Each round:
 3. **Fix** (after rounds 0 and 1). Fix findings you agree with that are high severity or raised by two or more specialists. Where specialists conflict, decide and note the trade-off. Don't change what the product does or how it should feel (pricing, positioning, new features): list those for the user.
 4. **Prove.** Run the project's checks and retake the screenshots. Revert any fix that breaks a check. Commit each round separately.
 
-Skip round 2 only if every round 1 score is 9 or higher with no high finding open, and say so. If the target can't be changed from here, run round 0 only and report recommendations.
+Skip round 2 only if every round 1 score is 6 or higher with no high finding open, and say so. If the target can't be changed from here, run round 0 only and report recommendations.
 
 ## 4. Report
 

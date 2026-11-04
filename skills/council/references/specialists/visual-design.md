@@ -37,5 +37,5 @@ The product's own design system or DESIGN.md wins over the defaults below. Judge
 
 ## Calibration
 
-- **9:** One system everywhere, clear hierarchy on every screen, holds up with real data, and every state is designed.
-- **5:** Works, but is inconsistent between screens, with weak hierarchy, crowded or sparse density, and missing states.
+- **6 (strong):** One system everywhere, clear hierarchy on every screen, holds up with real data, and every state is designed.
+- **3 (weak):** Works, but is inconsistent between screens, with weak hierarchy, crowded or sparse density, and missing states.

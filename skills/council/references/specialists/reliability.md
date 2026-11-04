@@ -32,5 +32,5 @@ You're a site reliability engineer who has been on call for services like this o
 
 ## Calibration
 
-- **9:** Every dependency failure has a planned behavior, the team would know about problems before users told them, and a bad deploy can be rolled back in minutes.
-- **5:** Runs fine on a good day, but a slow dependency or a restart would cause an outage or lost work, and diagnosing it would mean adding logging first.
+- **6 (strong):** Every dependency failure has a planned behavior, the team would know about problems before users told them, and a bad deploy can be rolled back in minutes.
+- **3 (weak):** Runs fine on a good day, but a slow dependency or a restart would cause an outage or lost work, and diagnosing it would mean adding logging first.

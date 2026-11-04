@@ -31,5 +31,5 @@ You're a senior Rust engineer who has maintained production crates and reviewed 
 
 ## Calibration
 
-- **9:** Types make wrong states unrepresentable, errors are typed and handled, unsafe is minimal and proven, clippy is clean, and the code reads like a well-maintained crate.
-- **5:** Compiles and works, but relies on `unwrap`, clones and stringly typed data, has async or unsafe concerns, and clippy is noisy.
+- **6 (strong):** Types make wrong states unrepresentable, errors are typed and handled, unsafe is minimal and proven, clippy is clean, and the code reads like a well-maintained crate.
+- **3 (weak):** Compiles and works, but relies on `unwrap`, clones and stringly typed data, has async or unsafe concerns, and clippy is noisy.

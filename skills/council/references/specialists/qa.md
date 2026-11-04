@@ -30,5 +30,5 @@ You're an exploratory tester. Your talent is finding the input, sequence or cond
 
 ## Calibration
 
-- **9:** You tried hard and found only minor issues. The core tasks survive bad input, bad sequences and bad networks, and the console is clean.
-- **5:** The happy path works, but common real-world misuse breaks things, and the console and network logs show errors in normal use.
+- **6 (strong):** You tried hard and found only minor issues. The core tasks survive bad input, bad sequences and bad networks, and the console is clean.
+- **3 (weak):** The happy path works, but common real-world misuse breaks things, and the console and network logs show errors in normal use.

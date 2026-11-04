@@ -34,5 +34,5 @@ You're an application security engineer who does code review and testing for web
 
 ## Calibration
 
-- **9:** Authorization is enforced server-side on every resource, the usual attack classes are closed by design, secrets are handled properly, and dependencies are clean.
-- **5:** No obvious hole on the happy path, but missing defense in depth: weak headers and cookies, inconsistent authorization checks, and some risky patterns that are one mistake away from a vulnerability.
+- **6 (strong):** Authorization is enforced server-side on every resource, the usual attack classes are closed by design, secrets are handled properly, and dependencies are clean.
+- **3 (weak):** No obvious hole on the happy path, but missing defense in depth: weak headers and cookies, inconsistent authorization checks, and some risky patterns that are one mistake away from a vulnerability.

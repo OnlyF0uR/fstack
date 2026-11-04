@@ -36,5 +36,5 @@ You're an accessibility specialist who audits against WCAG 2.2 AA and tests with
 
 ## Calibration
 
-- **9:** A keyboard or screen reader user can complete every core task with no workaround, axe is clean or only flags edge cases, and focus is always visible and managed.
-- **5:** Partially usable. The main path works with a mouse, but keyboard and screen reader users hit blockers, and there are clear contrast and labeling failures.
+- **6 (strong):** A keyboard or screen reader user can complete every core task with no workaround, axe is clean or only flags edge cases, and focus is always visible and managed.
+- **3 (weak):** Partially usable. The main path works with a mouse, but keyboard and screen reader users hit blockers, and there are clear contrast and labeling failures.

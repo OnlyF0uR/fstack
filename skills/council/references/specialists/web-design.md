@@ -42,5 +42,5 @@ Each of these is a finding:
 
 ## Calibration
 
-- **9:** Recognisably designed for this brand, with no template tells, disciplined type and color, full use of the width, and every state crafted.
-- **5:** Clean but generic: a boxed centred layout, a default split hero, stock imagery, and several of the template tells above.
+- **6 (strong):** Recognisably designed for this brand, with no template tells, disciplined type and color, full use of the width, and every state crafted.
+- **3 (weak):** Clean but generic: a boxed centred layout, a default split hero, stock imagery, and several of the template tells above.

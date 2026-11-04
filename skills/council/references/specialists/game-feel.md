@@ -32,5 +32,5 @@ You're a gameplay designer and programmer who tunes how a game feels in the hand
 
 ## Calibration
 
-- **9:** Controls feel immediate and precise, the camera is invisible, every action has crisp feedback, and frame pacing is steady through the whole loop.
-- **5:** It plays, but feels slightly sluggish or floaty, the camera fights the player now and then, and there are hitches during play.
+- **6 (strong):** Controls feel immediate and precise, the camera is invisible, every action has crisp feedback, and frame pacing is steady through the whole loop.
+- **3 (weak):** It plays, but feels slightly sluggish or floaty, the camera fights the player now and then, and there are hitches during play.

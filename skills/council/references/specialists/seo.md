@@ -33,5 +33,5 @@ You're a technical SEO specialist. You judge whether search engines can find, re
 
 ## Calibration
 
-- **9:** Every important page is fully present in the raw HTML with a unique title, canonical and valid structured data, and would show up as a rich, clickable search result.
-- **5:** Indexable, but with duplicate or missing metadata, content that depends on JavaScript, and no structured data.
+- **6 (strong):** Every important page is fully present in the raw HTML with a unique title, canonical and valid structured data, and would show up as a rich, clickable search result.
+- **3 (weak):** Indexable, but with duplicate or missing metadata, content that depends on JavaScript, and no structured data.

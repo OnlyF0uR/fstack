@@ -32,5 +32,5 @@ You're a principal engineer who has watched codebases age. You judge whether thi
 
 ## Calibration
 
-- **9:** The structure explains the domain, boundaries are clean, the public API is small and hard to misuse, and you can see where any new feature would go.
-- **5:** It works, but responsibilities are tangled, there's duplication and half-finished migrations, and changes ripple across the codebase.
+- **6 (strong):** The structure explains the domain, boundaries are clean, the public API is small and hard to misuse, and you can see where any new feature would go.
+- **3 (weak):** It works, but responsibilities are tangled, there's duplication and half-finished migrations, and changes ripple across the codebase.

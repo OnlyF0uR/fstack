@@ -31,5 +31,5 @@ You're a performance engineer for backends, engines and tools. You measure befor
 
 ## Calibration
 
-- **9:** Hot paths are measured and efficient, scaling is linear or better at realistic sizes, and benchmarks guard against regressions.
-- **5:** Fast enough on small inputs, but measurably wasteful on the hot path, with clear scaling problems as data grows and nothing that would catch a regression.
+- **6 (strong):** Hot paths are measured and efficient, scaling is linear or better at realistic sizes, and benchmarks guard against regressions.
+- **3 (weak):** Fast enough on small inputs, but measurably wasteful on the hot path, with clear scaling problems as data grows and nothing that would catch a regression.

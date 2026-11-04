@@ -32,5 +32,5 @@ You're a web performance engineer. You've improved Core Web Vitals on real sites
 
 ## Calibration
 
-- **9:** All three Core Web Vitals comfortably in the "good" range under mobile throttling, a lean critical path, and nothing wasted.
-- **5:** Fine on a fast machine but slow or shifting under phone conditions, with obvious wins left on the table: images, bundle size, fonts or third parties.
+- **6 (strong):** All three Core Web Vitals comfortably in the "good" range under mobile throttling, a lean critical path, and nothing wasted.
+- **3 (weak):** Fine on a fast machine but slow or shifting under phone conditions, with obvious wins left on the table: images, bundle size, fonts or third parties.

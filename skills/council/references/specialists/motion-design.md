@@ -51,5 +51,5 @@ Any break of these is a high finding:
 
 ## Calibration
 
-- **9:** Motion you'd miss if it were removed, every rule above respected, one consistent set of curves, smooth at 4× throttle, and real reduced-motion alternatives.
-- **5:** Library defaults or ad hoc values, some jank, motion that doesn't explain anything, and one or more of the never-broken rules broken.
+- **6 (strong):** Motion you'd miss if it were removed, every rule above respected, one consistent set of curves, smooth at 4× throttle, and real reduced-motion alternatives.
+- **3 (weak):** Library defaults or ad hoc values, some jank, motion that doesn't explain anything, and one or more of the never-broken rules broken.
