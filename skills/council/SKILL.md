@@ -74,6 +74,8 @@ From round 1, each specialist gets its own previous findings, each marked with y
 
 After round 1, skip round 2 if every specialist that ran in round 1 scored 6 or higher and no high finding is open (a declined high counts as open). A "no score" in round 1 prevents the skip; specialists left out for a missing tool don't count, and their later cells read "—". If you skip, still make round 1's fixes and mark them "not rescored" under Changes.
 
+**A target score.** If the user sets one ("keep going until the mean is above 6"), keep fixing and running passes after round 2 (`r3`, `r4` and so on) until it's met. Stop early, and say why, if two passes in a row don't raise the mean, because the remaining findings then need the user's decisions rather than more rounds.
+
 **Adding comparisons later.** When the user asks to add products to an existing table, run the next c pass (`c1`, then `c2`) with the same specialists over the target's current state and the new products together, building briefs from the template for that pass. If the earlier table isn't in this conversation, take it from the pull request's "Council review" section or ask the user for it. Add a column "Now" for the target, then the new products.
 
 ## 4. Report
