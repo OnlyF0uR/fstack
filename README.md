@@ -47,7 +47,7 @@ To use one skill without the plugin, copy its folder into `~/.claude/skills/`. I
 - New skills: [CLAUDE.md](./CLAUDE.md#adding-a-skill) says where a skill goes and how to add it. The "New skills" table in four-mode decides whether it belongs in fstack at all.
 - `node scripts/check.mjs` checks every skill's frontmatter, size and links (every reference must be reachable from SKILL.md), that each skill is in exactly one plugin, and this table. CI runs it on every push, and the Stop hook in `.claude/settings.json` runs it before Claude finishes a turn in this repo.
 - `claude plugin validate .` checks the marketplace against Claude Code's own rules.
-- council's web-design, visual-design and motion-design specialists copy rules from ngd, and its copywriting specialist condenses the humanizer catalog. Each names the file and commit it came from. When those files change, update the specialists.
+- Some council specialists copy rules from ngd or the humanizer catalog, as [CLAUDE.md](./CLAUDE.md) explains. Each names its source file and commit.
 - reflect edits these skills too. Review what it changes in four-mode the way you'd review any rule that every session will follow.
 
 ## Credits
