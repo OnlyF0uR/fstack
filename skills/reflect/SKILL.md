@@ -47,8 +47,8 @@ Then drop:
 | How the user likes to work, in any project | OnlyF0uR/fstack: `skills/four-mode/SKILL.md` |
 | Another fstack skill | OnlyF0uR/fstack: that skill's folder under `skills/` |
 | Rust in general | Atroxabot/skills: `skills/rust-dev/` or `skills/rust-gui/` |
-| Building sites, stores or panels | OnlyF0uR/ngd. Shared material lives in `shared/`, so edit it there and never in a skill's synced copy. Some council specialists in fstack copy from ngd's `design-language.md`, `panel-ux.md` and `motion.md`; when one of those changes, update every specialist whose `Source:` line names it (`grep -rn "Source: OnlyF0uR/ngd" skills/council` in fstack), in the same session. |
-| Writing | Atroxabot/skills: `skills/humanizer/` and the format skills. The humanizer's catalog and scanner are the originals of copies in three other skills, and of the condensed list in any council specialist whose `Source:` line names it, so update that in the same session. |
+| Building sites, stores or panels | OnlyF0uR/ngd. Shared material lives in `shared/`, so edit it there and never in a skill's synced copy. Some council specialists in fstack copy from ngd. When an ngd file changes, update every specialist whose `Source:` line names it (`grep -rn "Source: OnlyF0uR/ngd" skills/council` in fstack) in the same session. |
+| Writing | Atroxabot/skills: `skills/humanizer/` and the format skills. The humanizer's catalog and scanner are the originals of copies in three other skills, and of the condensed list in any council specialist whose `Source:` line names it (`grep -rn "Source: Atroxabot/skills" skills/council` in fstack), so update all of them in the same session. |
 | A skill that should have triggered and didn't | That skill's `description` |
 | A workflow that keeps coming back and that no skill covers | A new skill, in the home that the New skills table in the four-mode skill gives it. This is rare: propose it, but don't write it in this pass. |
 
