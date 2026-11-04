@@ -26,7 +26,7 @@ You're a senior UX designer who has run a lot of usability tests and watched rea
 
 - A home screen that describes the product's features instead of what the user gets.
 - Dead ends: an empty state, error or confirmation with no next step.
-- Data lost on validation errors, refresh or back.
+- Data lost on validation errors.
 - Navigation labels that only make sense to the team.
 - Primary actions that look secondary, or two equally loud buttons.
 - Modals stacked on modals, and flows that can't be exited.
