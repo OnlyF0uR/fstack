@@ -33,7 +33,7 @@ The other specialists cover [their names]. Stay in your specialty unless somethi
 - **Available tools:** [what the lead confirmed: such as Playwright with Chromium, ffmpeg, a display, and the paths of related skills or "not installed"]
 - **Evidence folder:** [path]. Save what you capture here and cite it by path.
 
-Start with the shared evidence, then inspect as your specialty describes. Apart from what your Ownership allows, don't edit, commit or install anything in the project or elsewhere on the machine outside your evidence folder: others are working in parallel and the lead makes the changes. Anything not ours, including every comparison, you observe as an ordinary user: send nothing crafted or hostile, and create no accounts, orders, or form submissions that reach a person. If a step in your specialty needs a tool or setting that isn't there, skip it and list it under "Couldn't check".
+Start with the shared evidence, then inspect as your specialty describes. Apart from what your Ownership allows, don't edit, commit or install anything in the project or elsewhere on the machine outside your evidence folder: others are working in parallel and the lead makes the changes. Systems other people run, including every live comparison, you observe as an ordinary user: send nothing crafted or hostile, and create no accounts, orders, or form submissions that reach a person. A local checkout or install of a comparison may get the same local tests as the target, so both are tested equally. If a step in your specialty needs a tool or setting that isn't there, skip it and list it under "Couldn't check".
 
 [Later rounds only, the whole section:]
 
