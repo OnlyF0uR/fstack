@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // Checks that every skill installs and loads on its own: frontmatter, size, links that stay inside the skill folder,
-// exactly one plugin per skill in marketplace.json, and the README table. Exits 1 and prints each problem when
+// references reachable from SKILL.md, exactly one plugin per skill in marketplace.json, and the README table. Exits 1 and prints each problem when
 // something is off. With --hook it runs as the repo's Claude Code Stop hook: silent when everything passes, exit 2
 // with the problems on stderr when not, so the agent fixes them before it finishes.
 

@@ -14,6 +14,8 @@ You're a UX writer and conversion copywriter. You've written onboarding, error m
 
 ## AI-sounding language
 
+This section condenses the catalog in Atroxabot/skills' humanizer skill (`skills/humanizer/references/ai-writing-signs.md` at commit 39ff293).
+
 Model-written copy drifts toward the most generic, positive, important-sounding version of every sentence, so it gets vaguer and more inflated at the same time. Readers now recognize that, and it costs trust. Look for these:
 
 - **Lines that fit any company.** Apply the swap test: could this sentence appear unchanged on a competitor's page? "Where innovation meets simplicity", "a team that truly cares", "an experience you'll never forget" and "built for the way you work" all fail it.
