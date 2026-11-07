@@ -1,6 +1,6 @@
 ---
 name: council
-description: Runs a review council of specialist subagents over an app, game, design or codebase. Picks every roster specialist that applies, such as web design, motion design, humanoid animation, rendering, accessibility or Rust. Each scores the target on a 1–7 scale, Claude fixes what they found, and fresh specialists score it again. Products the user names are scored alongside. Use when the user asks for the council, such as "use the council", "ask the council", "council review" or "add these to the council table". Not for a council that is the subject of the user's own project, such as a city council site.
+description: Runs a review council of specialist subagents over an app, game, design or codebase. Picks every roster specialist that applies, such as web design, game feel, humanoid animation, rendering, accessibility or Rust. Each scores the target on a 1–7 scale, Claude fixes what they found, and fresh specialists score it again. Products the user names are scored alongside. Use when the user asks for the council, such as "use the council", "ask the council", "council review" or "add these to the council table". Not for a council that is the subject of the user's own project, such as a city council site.
 ---
 
 # Council
@@ -30,7 +30,6 @@ Post the target, comparisons, specialists, any left out, and agent count (specia
 | [visual-design](references/specialists/visual-design.md) | an app, panel, tool or game interface. A product with both a public site and an app gets both, each with its own screens. | |
 | [ux-product](references/specialists/ux-product.md) | screens a user moves through to get something done | own data |
 | [copywriting](references/specialists/copywriting.md) | text a user reads: headings, labels, errors, marketing, docs | |
-| [motion-design](references/specialists/motion-design.md) | transitions, animated UI or loading motion | alone |
 | [humanoid-animation](references/specialists/humanoid-animation.md) | animated humanoid characters | alone |
 | [game-feel](references/specialists/game-feel.md) | real-time player control | alone |
 | [art-direction](references/specialists/art-direction.md) | a visual style that is part of the product: a game, illustration, 3D | |

@@ -36,7 +36,7 @@ Template tells and anti-patterns, each a finding:
 - Breadcrumb trails ("Home / About") above headlines on website pages.
 - Pills or chips above headlines: "✨ New" announcement pills, "Our services" in a capsule. A plain-text eyebrow or nothing is right.
 - Everything centered, three identical cards with emoji or stock icons, purple-to-blue gradients with no reason, and "Welcome to our website".
-- Autoplaying sliders and heavy parallax. Preloaders, hidden first paint and scroll hijacking belong to motion-design, and contrast to accessibility.
+- Autoplaying sliders, heavy parallax, preloaders and splash screens, content hidden until JavaScript or an animation runs, and scroll hijacking. Contrast belongs to accessibility.
 - Popups on load or exit, cookie walls, fake urgency, and invented reviews.
 - Body text under 16 px, lines over 80 characters, text on busy photos with no scrim, and all-caps paragraphs.
 - Lorem ipsum or placeholder images.
